@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Monster game</title>
+    <link rel="stylesheet" href="./dist/bundle.css">
+</head>
+
+<body>
+    <h1 class="game__title">Monster Game</h1>
+    <div class="player-wrapper"></div>
+    <div class="attack-wrapper"></div>
+    <div class="log-wrapper"></div>
+
+    <template class="players">
+        <div class="player">
+            <p class="player__name"></p>
+            <div class="player__status-bar">
+                <div class="player__status"></div>
+            </div>
+            <p class="player__points">100</p>
+        </div>
+    </template>
+
+    <template class="logs">
+        <div class="log">
+            <p class="log__events"></p>
+        </div>
+    </template>
+
+    <template class="attacks">
+        <div class="attack">
+            <button class="attack__attack-btn">Attacker</button>
+            <button class="attack__special-attack-btn">Special Attack</button>
+            <button class="attack__heal-btn">Heal</button>
+            <button class="attack__surrender-btn">Surrender</button>
+        </div>
+    </template>
+
+    <script rel="javascript" src="./dist/bundle.js"></script>
+</body>
+
+</html>
