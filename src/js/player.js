@@ -1,14 +1,18 @@
+import * as settings from './settings';
 export const player = {
     'playerElt': document.querySelector('.players'),
     'playerWrpr': document.querySelector('.player-wrapper'),
     'playerDiv': document.querySelector('.player'),
-    'playerArray': {
-        'name': 'player 1',
+    'playerArray': {  
+        'name': settings.PLAYER_NAME_ARRAY[0],
         'type': '',
-        'lp': 100,
+        'lp': settings.MAX_PLAYER_LP,
     },
     init() {
-        this.playerArray.name = prompt('Give me your name PLAYER ONE XD');
+        this.playerArray.name = prompt(settings.MESSAGE_ARRAY[3]);
+        if (this.playerArray.name === ''){
+            this.playerArray.name = settings.PLAYER_NAME_ARRAY[0];
+        }
         this.createElements();
     },
     createElements() {
